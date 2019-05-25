@@ -77,7 +77,7 @@
             this.buttonSubmit.TabIndex = 3;
             this.buttonSubmit.Text = "Trimite";
             this.buttonSubmit.UseVisualStyleBackColor = true;
-            this.buttonSubmit.Click += new System.EventHandler(this.ButtonSubmit_Click);
+            this.buttonSubmit.Click += new System.EventHandler(this.OnButtonSubmitClick);
             // 
             // labelQuestions
             // 
@@ -146,7 +146,6 @@
             this.A.TabIndex = 5;
             this.A.TabStop = true;
             this.A.UseVisualStyleBackColor = true;
-            this.A.CheckedChanged += new System.EventHandler(this.RadioButtonA_CheckedChanged);
             // 
             // C
             // 
@@ -203,7 +202,7 @@
             this.buttonStart.TabIndex = 0;
             this.buttonStart.Text = "Start";
             this.buttonStart.UseVisualStyleBackColor = true;
-            this.buttonStart.Click += new System.EventHandler(this.buttonStart_Click_1);
+            this.buttonStart.Click += new System.EventHandler(this.OnButtonStartClick);
             // 
             // FormQuiz
             // 
