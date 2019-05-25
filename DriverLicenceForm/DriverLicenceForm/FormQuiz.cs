@@ -152,5 +152,23 @@ namespace DriverLicenceForm
             return selectedOption;
         }
         #endregion
+
+
+
+        private void buttonHelp_Click(object sender, EventArgs e)
+        {
+
+            /*if (System.IO.File.Exists("DriverLicenceForm.chm"))
+            {
+                System.Diagnostics.Process.Start("DriverLicenceForm.chm");
+            }*/
+            //System.Diagnostics.Process.Start("DriverLicenceForm.chm");
+            Help.ShowHelp(this, "DriverLicenceForm.chm");
+        }
+
+        private void buttonExit_Click(object sender, EventArgs e)
+        {
+            System.Environment.Exit(0);
+        }
     }
 }
