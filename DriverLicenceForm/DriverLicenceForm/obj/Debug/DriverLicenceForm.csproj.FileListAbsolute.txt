@@ -17,3 +17,4 @@ D:\Facultate\An IV\Sem II\IP\Proiect\IP_Project\DriverLicenceForm\DriverLicenceF
 D:\Facultate\An IV\Sem II\IP\Proiect\IP_Project\DriverLicenceForm\DriverLicenceForm\obj\Debug\DriverLicenceForm.csproj.CoreCompileInputs.cache
 D:\Facultate\An IV\Sem II\IP\Proiect\IP_Project\DriverLicenceForm\DriverLicenceForm\obj\Debug\DriverLicenceForm.exe
 D:\Facultate\An IV\Sem II\IP\Proiect\IP_Project\DriverLicenceForm\DriverLicenceForm\obj\Debug\DriverLicenceForm.pdb
+D:\facultate\an4\IP_Project\IP_Project\DriverLicenceForm\DriverLicenceForm\obj\Debug\DriverLicenceForm.FormQuiz.resources
