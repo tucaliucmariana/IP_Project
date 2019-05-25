@@ -12,16 +12,17 @@ using System.Windows.Forms;
 /// <summary>
 /// Creat de Tucaliuc Mariana, Rusu Teona
 /// Form Quiz
+/// Afiseaza intrebarile catre utilizator
+/// Valideaza raspunsurile si il afiseaza catre utilizator
 /// </summary>
-/// 
 namespace DriverLicenceForm
 {
     public partial class FormQuiz : Form
     {
         #region public properties
 
-        public QuestionsRetriever _questions = QuestionsRetriever.Instance();
-        public int PanelCount = 0;
+        public QuestionsRetriever DataInstance = QuestionsRetriever.Instance();
+        public int PanelsCount = 0;
         public int CorrectAnswersCount = 0;
         public int IncorrectAnswersCount = 0;
 
@@ -31,33 +32,28 @@ namespace DriverLicenceForm
             InitializeComponent();
         }
 
-        private void FormQuiz_Load(object sender, EventArgs e)
-        {
-
-        }
-
         #region event handlers
         // inceperea testului
-        private void OnButtonStartClick(object sender, EventArgs e)
+        private void OnStartButtonClick(object sender, EventArgs e)
         {
             //afisarea panelului de intrebari
             panelQuestion.BringToFront();
 
             UpdatePanel();
 
-            resetAnswers();
+            ResetAnswers();
         }
 
-        private void OnButtonSubmitClick(object sender, EventArgs e)
+        private void OnSubmitButtonClick(object sender, EventArgs e)
         {
-            string selectedOption = GetSelectedOption();
+            RadioButton selectedOption = GetSelectedOption();
 
             UpdateQuizResult(selectedOption);
 
-            PanelCount++;
+            PanelsCount++;
 
             // verifica daca s-a ajuns la sfarsitul testului
-            if (PanelCount >= _questions.QuestionsList.Count)
+            if (PanelsCount >= DataInstance.QuestionsList.Count)
             {
                 DisplayMessage("Rezultat test: ");
                 //revenire la panelul initial
@@ -69,21 +65,34 @@ namespace DriverLicenceForm
 
             UpdatePanel();
 
-            resetAnswers();
+            ResetAnswers();
+        }
+
+        private void OnHelpButtonClick(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, "DriverLicenceForm.chm");
+        }
+
+        private void OnExitButtonClick(object sender, EventArgs e)
+        {
+            System.Environment.Exit(0);
         }
         #endregion
 
-        #region static methods
+        #region private methods
         // resetare checkbox-uri
-        private void resetAnswers()
+        private void ResetAnswers()
         {
             A.Checked = false;
             B.Checked = false;
             C.Checked = false;
+            A.ForeColor = Color.Black;
+            B.ForeColor = Color.Black;
+            C.ForeColor = Color.Black;
         }
         public void ResetValues()
         {
-            PanelCount = 0;
+            PanelsCount = 0;
             CorrectAnswersCount = 0;
             IncorrectAnswersCount = 0;
         }
@@ -93,10 +102,10 @@ namespace DriverLicenceForm
         {
             try
             {
-                textBoxQuestion.Text = _questions.QuestionsList[PanelCount].QuestionText;
-                A.Text = _questions.QuestionsList[PanelCount].AnswerTextA;
-                B.Text = _questions.QuestionsList[PanelCount].AnswerTextB;
-                C.Text = _questions.QuestionsList[PanelCount].AnswerTextC;
+                textBoxQuestion.Text = DataInstance.QuestionsList[PanelsCount].QuestionText;
+                A.Text = DataInstance.QuestionsList[PanelsCount].AnswerTextA;
+                B.Text = DataInstance.QuestionsList[PanelsCount].AnswerTextB;
+                C.Text = DataInstance.QuestionsList[PanelsCount].AnswerTextC;
             }
             catch (System.IndexOutOfRangeException e)
             {
@@ -107,17 +116,42 @@ namespace DriverLicenceForm
         }
 
         // metoda care incrementeaza raspunsurile corecte/incorecte pentru fiecare intrebare
-        public void UpdateQuizResult(string selectedOption)
+        public void UpdateQuizResult(RadioButton selectedOption)
         {
-            if (_questions.QuestionsList[PanelCount].CorrectAnswerText == selectedOption)
+            if (DataInstance.QuestionsList[PanelsCount].CorrectAnswerText == selectedOption.Name)
             {
+                selectedOption.ForeColor = Color.Green;
                 CorrectAnswersCount++;
                 DisplayMessage("Raspuns corect!");
             }
             else
             {
+                ShowCorrectAnswer(selectedOption);
+                selectedOption.ForeColor = Color.Red;
                 IncorrectAnswersCount++;
                 DisplayMessage("Raspuns Incorect!");
+            }
+        }
+
+        private void ShowCorrectAnswer(RadioButton selectedOption)
+        {
+            if (A != selectedOption && A.Name == DataInstance.QuestionsList[PanelsCount].CorrectAnswerText)
+            {
+                A.ForeColor = Color.Green;
+            }
+            else
+            {
+                if (B != selectedOption && B.Name == DataInstance.QuestionsList[PanelsCount].CorrectAnswerText)
+                {
+                    B.ForeColor = Color.Green;
+                }
+                else
+                {
+                    if (C != selectedOption && C.Name == DataInstance.QuestionsList[PanelsCount].CorrectAnswerText)
+                    {
+                        C.ForeColor = Color.Green;
+                    }
+                }
             }
         }
 
@@ -127,24 +161,24 @@ namespace DriverLicenceForm
         }
 
         // Get selected option from checkboxes
-        public string GetSelectedOption()
+        private RadioButton GetSelectedOption()
         {
-            string selectedOption = string.Empty;
+            RadioButton selectedOption = new RadioButton();
             if (A.Checked == true)
             {
-                selectedOption = A.Name;
+                selectedOption = A;
             }
             else
             {
                 if (B.Checked == true)
                 {
-                    selectedOption = B.Name;
+                    selectedOption = B;
                 }
                 else
                 {
                     if (C.Checked == true)
                     {
-                        selectedOption = C.Name;
+                        selectedOption = C;
                     }
                 }
             }
@@ -154,20 +188,6 @@ namespace DriverLicenceForm
 
 
 
-        private void buttonHelp_Click(object sender, EventArgs e)
-        {
 
-            /*if (System.IO.File.Exists("DriverLicenceForm.chm"))
-            {
-                System.Diagnostics.Process.Start("DriverLicenceForm.chm");
-            }*/
-            //System.Diagnostics.Process.Start("DriverLicenceForm.chm");
-            Help.ShowHelp(this, "DriverLicenceForm.chm");
-        }
-
-        private void buttonExit_Click(object sender, EventArgs e)
-        {
-            System.Environment.Exit(0);
-        }
     }
 }

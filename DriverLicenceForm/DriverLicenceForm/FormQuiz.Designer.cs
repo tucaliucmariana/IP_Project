@@ -75,7 +75,7 @@
             this.buttonSubmit.TabIndex = 3;
             this.buttonSubmit.Text = "Trimite";
             this.buttonSubmit.UseVisualStyleBackColor = true;
-            this.buttonSubmit.Click += new System.EventHandler(this.OnButtonSubmitClick);
+            this.buttonSubmit.Click += new System.EventHandler(this.OnSubmitButtonClick);
             // 
             // labelQuestions
             // 
@@ -189,7 +189,7 @@
             this.buttonStart.TabIndex = 0;
             this.buttonStart.Text = "Start";
             this.buttonStart.UseVisualStyleBackColor = true;
-            this.buttonStart.Click += new System.EventHandler(this.OnButtonStartClick);
+            this.buttonStart.Click += new System.EventHandler(this.OnStartButtonClick);
             // 
             // buttonHelp
             // 
@@ -199,7 +199,7 @@
             this.buttonHelp.TabIndex = 2;
             this.buttonHelp.Text = "Ajutor";
             this.buttonHelp.UseVisualStyleBackColor = true;
-            this.buttonHelp.Click += new System.EventHandler(this.buttonHelp_Click);
+            this.buttonHelp.Click += new System.EventHandler(this.OnHelpButtonClick);
             // 
             // FormQuiz
             // 
@@ -210,7 +210,6 @@
             this.Controls.Add(this.panelQuestion);
             this.Name = "FormQuiz";
             this.Text = "Chestionar Auto";
-            this.Load += new System.EventHandler(this.FormQuiz_Load);
             this.panelQuestion.ResumeLayout(false);
             this.panelQuestion.PerformLayout();
             this.groupBoxAnswers.ResumeLayout(false);
