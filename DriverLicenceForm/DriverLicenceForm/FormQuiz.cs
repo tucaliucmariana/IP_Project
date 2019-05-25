@@ -18,12 +18,12 @@ namespace DriverLicenceForm
 {
     public partial class FormQuiz : Form
     {
-        #region private members
+        #region public properties
 
-        private QuestionsRetriever _questions = QuestionsRetriever.Instance();
-        private int _panelCount = 0;
-        private int _correctAnswers = 0;
-        private int _incorrectAnswers = 0;
+        public QuestionsRetriever _questions = QuestionsRetriever.Instance();
+        public int PanelCount = 0;
+        public int CorrectAnswersCount = 0;
+        public int IncorrectAnswersCount = 0;
 
         #endregion
         public FormQuiz()
@@ -54,10 +54,10 @@ namespace DriverLicenceForm
 
             UpdateQuizResult(selectedOption);
 
-            _panelCount++;
+            PanelCount++;
 
             // verifica daca s-a ajuns la sfarsitul testului
-            if (_panelCount >= _questions.QuestionsList.Count)
+            if (PanelCount >= _questions.QuestionsList.Count)
             {
                 DisplayMessage("Rezultat test: ");
                 //revenire la panelul initial
@@ -81,11 +81,11 @@ namespace DriverLicenceForm
             B.Checked = false;
             C.Checked = false;
         }
-        private void ResetValues()
+        public void ResetValues()
         {
-            _panelCount = 0;
-            _correctAnswers = 0;
-            _incorrectAnswers = 0;
+            PanelCount = 0;
+            CorrectAnswersCount = 0;
+            IncorrectAnswersCount = 0;
         }
 
         // afiseaza in panelul existent urmatoarea intrebare
@@ -93,10 +93,10 @@ namespace DriverLicenceForm
         {
             try
             {
-                textBoxQuestion.Text = _questions.QuestionsList[_panelCount].QuestionText;
-                A.Text = _questions.QuestionsList[_panelCount].AnswerTextA;
-                B.Text = _questions.QuestionsList[_panelCount].AnswerTextB;
-                C.Text = _questions.QuestionsList[_panelCount].AnswerTextC;
+                textBoxQuestion.Text = _questions.QuestionsList[PanelCount].QuestionText;
+                A.Text = _questions.QuestionsList[PanelCount].AnswerTextA;
+                B.Text = _questions.QuestionsList[PanelCount].AnswerTextB;
+                C.Text = _questions.QuestionsList[PanelCount].AnswerTextC;
             }
             catch (System.IndexOutOfRangeException e)
             {
@@ -107,28 +107,27 @@ namespace DriverLicenceForm
         }
 
         // metoda care incrementeaza raspunsurile corecte/incorecte pentru fiecare intrebare
-        private void UpdateQuizResult(string selectedOption)
+        public void UpdateQuizResult(string selectedOption)
         {
-            if (_questions.QuestionsList[_panelCount].CorrectAnswerText == selectedOption)
+            if (_questions.QuestionsList[PanelCount].CorrectAnswerText == selectedOption)
             {
-                _correctAnswers++;
+                CorrectAnswersCount++;
                 DisplayMessage("Raspuns corect!");
-
             }
             else
             {
-                _incorrectAnswers++;
+                IncorrectAnswersCount++;
                 DisplayMessage("Raspuns Incorect!");
             }
         }
 
         private void DisplayMessage(string message)
         {
-            MessageBox.Show($"{message}{Environment.NewLine} Raspunsuri corecte: {_correctAnswers}, Raspunsuri gresite {_incorrectAnswers}");
+            MessageBox.Show($"{message}{Environment.NewLine} Raspunsuri corecte: {CorrectAnswersCount}, Raspunsuri gresite {IncorrectAnswersCount}");
         }
 
         // Get selected option from checkboxes
-        private string GetSelectedOption()
+        public string GetSelectedOption()
         {
             string selectedOption = string.Empty;
             if (A.Checked == true)
