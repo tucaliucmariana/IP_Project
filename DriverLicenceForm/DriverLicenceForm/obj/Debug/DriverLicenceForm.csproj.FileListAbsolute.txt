@@ -27,3 +27,6 @@ C:\ProiectIP\IP_Project\DriverLicenceForm\DriverLicenceForm\obj\Debug\DriverLice
 C:\ProiectIP\IP_Project\DriverLicenceForm\DriverLicenceForm\obj\Debug\DriverLicenceForm.FormQuiz.resources
 C:\ProiectIP\IP_Project\DriverLicenceForm\DriverLicenceForm\obj\Debug\DriverLicenceForm.Properties.Resources.resources
 C:\ProiectIP\IP_Project\DriverLicenceForm\DriverLicenceForm\obj\Debug\DriverLicenceForm.csproj.GenerateResource.Cache
+D:\facultate\an4\IP_Project\IP_Project\DriverLicenceForm\DriverLicenceForm\bin\Debug\DataStore.dll
+D:\facultate\an4\IP_Project\IP_Project\DriverLicenceForm\DriverLicenceForm\bin\Debug\DataStore.pdb
+D:\facultate\an4\IP_Project\IP_Project\DriverLicenceForm\DriverLicenceForm\obj\Debug\DriverLicenceForm.csproj.CopyComplete
