@@ -1,0 +1,9 @@
+D:\facultate\an4\IP_Project\IP_Project\DriverLicenceForm\DriverLicenceForm\bin\Debug\DriverLicenceForm.exe.config
+D:\facultate\an4\IP_Project\IP_Project\DriverLicenceForm\DriverLicenceForm\bin\Debug\DriverLicenceForm.exe
+D:\facultate\an4\IP_Project\IP_Project\DriverLicenceForm\DriverLicenceForm\bin\Debug\DriverLicenceForm.pdb
+D:\facultate\an4\IP_Project\IP_Project\DriverLicenceForm\DriverLicenceForm\obj\Debug\DriverLicenceForm.csprojAssemblyReference.cache
+D:\facultate\an4\IP_Project\IP_Project\DriverLicenceForm\DriverLicenceForm\obj\Debug\DriverLicenceForm.Properties.Resources.resources
+D:\facultate\an4\IP_Project\IP_Project\DriverLicenceForm\DriverLicenceForm\obj\Debug\DriverLicenceForm.csproj.GenerateResource.cache
+D:\facultate\an4\IP_Project\IP_Project\DriverLicenceForm\DriverLicenceForm\obj\Debug\DriverLicenceForm.csproj.CoreCompileInputs.cache
+D:\facultate\an4\IP_Project\IP_Project\DriverLicenceForm\DriverLicenceForm\obj\Debug\DriverLicenceForm.exe
+D:\facultate\an4\IP_Project\IP_Project\DriverLicenceForm\DriverLicenceForm\obj\Debug\DriverLicenceForm.pdb
