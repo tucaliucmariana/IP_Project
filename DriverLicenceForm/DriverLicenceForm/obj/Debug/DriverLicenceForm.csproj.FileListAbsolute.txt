@@ -18,3 +18,12 @@ D:\Facultate\An IV\Sem II\IP\Proiect\IP_Project\DriverLicenceForm\DriverLicenceF
 D:\Facultate\An IV\Sem II\IP\Proiect\IP_Project\DriverLicenceForm\DriverLicenceForm\obj\Debug\DriverLicenceForm.exe
 D:\Facultate\An IV\Sem II\IP\Proiect\IP_Project\DriverLicenceForm\DriverLicenceForm\obj\Debug\DriverLicenceForm.pdb
 D:\facultate\an4\IP_Project\IP_Project\DriverLicenceForm\DriverLicenceForm\obj\Debug\DriverLicenceForm.FormQuiz.resources
+C:\ProiectIP\IP_Project\DriverLicenceForm\DriverLicenceForm\bin\Debug\DriverLicenceForm.exe.config
+C:\ProiectIP\IP_Project\DriverLicenceForm\DriverLicenceForm\obj\Debug\DriverLicenceForm.exe
+C:\ProiectIP\IP_Project\DriverLicenceForm\DriverLicenceForm\obj\Debug\DriverLicenceForm.pdb
+C:\ProiectIP\IP_Project\DriverLicenceForm\DriverLicenceForm\bin\Debug\DriverLicenceForm.exe
+C:\ProiectIP\IP_Project\DriverLicenceForm\DriverLicenceForm\bin\Debug\DriverLicenceForm.pdb
+C:\ProiectIP\IP_Project\DriverLicenceForm\DriverLicenceForm\obj\Debug\DriverLicenceForm.csprojResolveAssemblyReference.cache
+C:\ProiectIP\IP_Project\DriverLicenceForm\DriverLicenceForm\obj\Debug\DriverLicenceForm.FormQuiz.resources
+C:\ProiectIP\IP_Project\DriverLicenceForm\DriverLicenceForm\obj\Debug\DriverLicenceForm.Properties.Resources.resources
+C:\ProiectIP\IP_Project\DriverLicenceForm\DriverLicenceForm\obj\Debug\DriverLicenceForm.csproj.GenerateResource.Cache
