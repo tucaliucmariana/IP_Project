@@ -10,11 +10,30 @@ using System.Windows.Forms;
 
 namespace DriverLicenceForm
 {
-    public partial class Form1 : Form
+    public partial class FormQuiz : Form
     {
-        public Form1()
+        public FormQuiz()
         {
             InitializeComponent();
+        }
+
+        private void FormQuiz_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonStart_Click_1(object sender, EventArgs e)
+        {
+            panelQuestion.BringToFront();
+            resetAnswers();
+        }
+
+        private void resetAnswers()
+        {
+            radioButtonA.Checked = false;
+            radioButtonB.Checked = false;
+            radioButtonC.Checked = false;
+            radioButtonD.Checked = false;
         }
     }
 }
