@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.28922.388
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DriverLicenceForm", "DriverLicenceForm\DriverLicenceForm.csproj", "{9F00E73B-AF39-454A-8B84-078737B49E3B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataStore", "DataStore\DataStore.csproj", "{3A6DB44D-FB8C-4194-A20D-FD0E8028955F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,10 +17,10 @@ Global
 		{9F00E73B-AF39-454A-8B84-078737B49E3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9F00E73B-AF39-454A-8B84-078737B49E3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9F00E73B-AF39-454A-8B84-078737B49E3B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{492FB534-B23E-4E8F-8431-37B54ED587E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{492FB534-B23E-4E8F-8431-37B54ED587E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{492FB534-B23E-4E8F-8431-37B54ED587E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{492FB534-B23E-4E8F-8431-37B54ED587E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A6DB44D-FB8C-4194-A20D-FD0E8028955F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A6DB44D-FB8C-4194-A20D-FD0E8028955F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A6DB44D-FB8C-4194-A20D-FD0E8028955F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A6DB44D-FB8C-4194-A20D-FD0E8028955F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
