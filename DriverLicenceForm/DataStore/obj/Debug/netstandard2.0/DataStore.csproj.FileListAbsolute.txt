@@ -1,0 +1,9 @@
+D:\Facultate\An IV\Sem II\IP\Proiect\IP_Project\DriverLicenceForm\DataStore\bin\Debug\netstandard2.0\DataStore.deps.json
+D:\Facultate\An IV\Sem II\IP\Proiect\IP_Project\DriverLicenceForm\DataStore\bin\Debug\netstandard2.0\DataStore.dll
+D:\Facultate\An IV\Sem II\IP\Proiect\IP_Project\DriverLicenceForm\DataStore\bin\Debug\netstandard2.0\DataStore.pdb
+D:\Facultate\An IV\Sem II\IP\Proiect\IP_Project\DriverLicenceForm\DataStore\obj\Debug\netstandard2.0\DataStore.csprojAssemblyReference.cache
+D:\Facultate\An IV\Sem II\IP\Proiect\IP_Project\DriverLicenceForm\DataStore\obj\Debug\netstandard2.0\DataStore.csproj.CoreCompileInputs.cache
+D:\Facultate\An IV\Sem II\IP\Proiect\IP_Project\DriverLicenceForm\DataStore\obj\Debug\netstandard2.0\DataStore.AssemblyInfoInputs.cache
+D:\Facultate\An IV\Sem II\IP\Proiect\IP_Project\DriverLicenceForm\DataStore\obj\Debug\netstandard2.0\DataStore.AssemblyInfo.cs
+D:\Facultate\An IV\Sem II\IP\Proiect\IP_Project\DriverLicenceForm\DataStore\obj\Debug\netstandard2.0\DataStore.dll
+D:\Facultate\An IV\Sem II\IP\Proiect\IP_Project\DriverLicenceForm\DataStore\obj\Debug\netstandard2.0\DataStore.pdb
