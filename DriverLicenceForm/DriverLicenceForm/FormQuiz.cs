@@ -25,7 +25,7 @@ namespace DriverLicenceForm
     {
         #region Public Member Variables
         public QuestionsRetriever DataInstance = QuestionsRetriever.Instance();
-        public int PanelsCount = 0;
+        public int PanelsCounter = 0;
         public int CorrectAnswersCount = 0;
         public int IncorrectAnswersCount = 0;
         #endregion
@@ -53,10 +53,10 @@ namespace DriverLicenceForm
 
             UpdateQuizResult(selectedOption);
 
-            PanelsCount++;
+            PanelsCounter++;
 
             // verifica daca s-a ajuns la sfarsitul testului
-            if (PanelsCount >= DataInstance.QuestionsList.Count)
+            if (PanelsCounter >= DataInstance.QuestionsList.Count)
             {
                 DisplayMessage("Rezultat test: ");
                 //revenire la panelul initial
@@ -82,7 +82,7 @@ namespace DriverLicenceForm
         }
         #endregion
 
-        #region Private Methods
+        #region Methods
         // resetare checkbox-uri
         private void ResetAnswers()
         {
@@ -96,7 +96,7 @@ namespace DriverLicenceForm
 
         public void ResetValues()
         {
-            PanelsCount = 0;
+            PanelsCounter = 0;
             CorrectAnswersCount = 0;
             IncorrectAnswersCount = 0;
         }
@@ -106,10 +106,10 @@ namespace DriverLicenceForm
         {
             try
             {
-                textBoxQuestion.Text = DataInstance.QuestionsList[PanelsCount].QuestionText;
-                A.Text = DataInstance.QuestionsList[PanelsCount].AnswerTextA;
-                B.Text = DataInstance.QuestionsList[PanelsCount].AnswerTextB;
-                C.Text = DataInstance.QuestionsList[PanelsCount].AnswerTextC;
+                textBoxQuestion.Text = DataInstance.GetQuestionById(PanelsCounter + 1);
+                A.Text = DataInstance.GetFirstAnswerByQuestionId(PanelsCounter + 1);
+                B.Text = DataInstance.GetSecondAnswerByQuestionId(PanelsCounter + 1);
+                C.Text = DataInstance.GetThirdAnswerByQuestionId(PanelsCounter + 1);
             }
             catch (System.IndexOutOfRangeException e)
             {
@@ -122,7 +122,7 @@ namespace DriverLicenceForm
         // metoda care incrementeaza raspunsurile corecte/incorecte pentru fiecare intrebare
         public void UpdateQuizResult(RadioButton selectedOption)
         {
-            if (DataInstance.QuestionsList[PanelsCount].CorrectAnswerText == selectedOption.Name)
+            if (DataInstance.GetRightAnswerByQuestionId(PanelsCounter + 1) == selectedOption.Name)
             {
                 selectedOption.ForeColor = Color.Green;
                 CorrectAnswersCount++;
@@ -139,19 +139,19 @@ namespace DriverLicenceForm
 
         private void ShowCorrectAnswer(RadioButton selectedOption)
         {
-            if (A != selectedOption && A.Name == DataInstance.QuestionsList[PanelsCount].CorrectAnswerText)
+            if (A != selectedOption && A.Name == DataInstance.GetRightAnswerByQuestionId(PanelsCounter + 1))
             {
                 A.ForeColor = Color.Green;
             }
             else
             {
-                if (B != selectedOption && B.Name == DataInstance.QuestionsList[PanelsCount].CorrectAnswerText)
+                if (B != selectedOption && B.Name == DataInstance.GetRightAnswerByQuestionId(PanelsCounter + 1))
                 {
                     B.ForeColor = Color.Green;
                 }
                 else
                 {
-                    if (C != selectedOption && C.Name == DataInstance.QuestionsList[PanelsCount].CorrectAnswerText)
+                    if (C != selectedOption && C.Name == DataInstance.GetRightAnswerByQuestionId(PanelsCounter + 1))
                     {
                         C.ForeColor = Color.Green;
                     }
