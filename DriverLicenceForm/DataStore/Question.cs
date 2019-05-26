@@ -1,19 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-/// <summary>
-/// Autor: Ioana Pomirleanu
-/// Clasa Question descrie structura unei intrebari.
-/// </summary>
+﻿/**************************************************************************
+ *                                                                        *
+ *  Copyright:   (c) 2019, Pomirleanu Ioana-Roxana,                       *
+ *                         Rusu Teona-Stefana,                            *
+ *                         Tucaliuc Mariana                               *
+ *  Description: Proiect la Ingineria Programarii                         *
+ *                                                                        *
+ **************************************************************************/
 
 namespace DataStore
 {
+    /// <summary>
+    /// Autor: Pomirleanu Ioana-Roxana
+    /// Clasa Question descrie structura unei intrebari.
+    /// </summary>
     public class Question
     {
-        #region private members
+        #region Private Member Variables
         private int _questionNumber = 0;
         private string _questionText = string.Empty;
         private string _answerA = string.Empty;
@@ -22,7 +24,7 @@ namespace DataStore
         private string _correctAnswer = string.Empty;
         #endregion
 
-        // constructor
+        #region Constructor
         public Question(int questionNumber, string questionText, string answerA, string answerB, string answerC, string correctAnswer)
         {
             _questionNumber = questionNumber;
@@ -32,8 +34,9 @@ namespace DataStore
             _answerC = answerC;
             _correctAnswer = correctAnswer;
         }
+        #endregion
 
-        #region getter properties
+        #region Public Properties
         public int QuestionNumber
         {
             get

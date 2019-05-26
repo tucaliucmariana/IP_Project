@@ -1,38 +1,41 @@
-﻿using DataStore;
+﻿/**************************************************************************
+ *                                                                        *
+ *  Copyright:   (c) 2019, Pomirleanu Ioana-Roxana,                       *
+ *                         Rusu Teona-Stefana,                            *
+ *                         Tucaliuc Mariana                               *
+ *  Description: Proiect la Ingineria Programarii                         *
+ *                                                                        *
+ **************************************************************************/
+
+using DataStore;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
-/// <summary>
-/// Creat de Tucaliuc Mariana, Rusu Teona
-/// Form Quiz
-/// Afiseaza intrebarile catre utilizator
-/// Valideaza raspunsurile si il afiseaza catre utilizator
-/// </summary>
 namespace DriverLicenceForm
 {
+    /// <summary>
+    /// Autor interfata: Rusu Teona-Stefana
+    /// Autor functionalitate: Tucaliuc Mariana
+    /// Form Quiz Design
+    /// Afiseaza intrebarile catre utilizator
+    /// Valideaza raspunsurile si afiseaza mesaje
+    /// </summary>
     public partial class FormQuiz : Form
     {
-        #region public properties
-
+        #region Public Member Variables
         public QuestionsRetriever DataInstance = QuestionsRetriever.Instance();
         public int PanelsCount = 0;
         public int CorrectAnswersCount = 0;
         public int IncorrectAnswersCount = 0;
-
         #endregion
+
         public FormQuiz()
         {
             InitializeComponent();
         }
 
-        #region event handlers
+        #region Event Handlers
         // inceperea testului
         private void OnStartButtonClick(object sender, EventArgs e)
         {
@@ -79,7 +82,7 @@ namespace DriverLicenceForm
         }
         #endregion
 
-        #region private methods
+        #region Private Methods
         // resetare checkbox-uri
         private void ResetAnswers()
         {
@@ -90,6 +93,7 @@ namespace DriverLicenceForm
             B.ForeColor = Color.Black;
             C.ForeColor = Color.Black;
         }
+
         public void ResetValues()
         {
             PanelsCount = 0;
@@ -185,9 +189,5 @@ namespace DriverLicenceForm
             return selectedOption;
         }
         #endregion
-
-
-
-
     }
 }
