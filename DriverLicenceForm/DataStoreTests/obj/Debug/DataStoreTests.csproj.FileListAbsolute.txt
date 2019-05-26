@@ -1,0 +1,10 @@
+D:\facultate\an4\IP_Project\IP_Project\DriverLicenceForm\DataStoreTests\obj\Debug\DataStoreTests.csprojAssemblyReference.cache
+D:\facultate\an4\IP_Project\IP_Project\DriverLicenceForm\DataStoreTests\obj\Debug\DataStoreTests.csproj.CoreCompileInputs.cache
+D:\facultate\an4\IP_Project\IP_Project\DriverLicenceForm\DataStoreTests\bin\Debug\DataStoreTests.dll
+D:\facultate\an4\IP_Project\IP_Project\DriverLicenceForm\DataStoreTests\bin\Debug\DataStoreTests.pdb
+D:\facultate\an4\IP_Project\IP_Project\DriverLicenceForm\DataStoreTests\bin\Debug\DataStore.dll
+D:\facultate\an4\IP_Project\IP_Project\DriverLicenceForm\DataStoreTests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+D:\facultate\an4\IP_Project\IP_Project\DriverLicenceForm\DataStoreTests\bin\Debug\DataStore.pdb
+D:\facultate\an4\IP_Project\IP_Project\DriverLicenceForm\DataStoreTests\obj\Debug\DataStoreTests.csproj.CopyComplete
+D:\facultate\an4\IP_Project\IP_Project\DriverLicenceForm\DataStoreTests\obj\Debug\DataStoreTests.dll
+D:\facultate\an4\IP_Project\IP_Project\DriverLicenceForm\DataStoreTests\obj\Debug\DataStoreTests.pdb

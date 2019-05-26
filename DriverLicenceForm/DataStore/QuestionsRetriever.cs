@@ -8,6 +8,7 @@
  **************************************************************************/
 
 using System.Collections.Generic;
+using System.Linq;
 
 namespace DataStore
 {
@@ -90,17 +91,22 @@ namespace DataStore
                 return _questions;
             }
         }
-        #endregion
 
         // Initializarea clasei de tip Singleton
         public static QuestionsRetriever Instance()
         {
-            if(_instance == null)
+            if (_instance == null)
             {
                 _instance = new QuestionsRetriever();
             }
 
             return _instance;
         }
+        public string GetQuestionById(int id) => _questions.Where(q => q.QuestionNumber == id).Select(q => q.QuestionText).First();
+        public string GetRightAnswerByQuestionId(int id) => _questions.Where(q => q.QuestionNumber == id).Select(q => q.CorrectAnswerText).First();
+        public string GetFirstAnswerByQuestionId(int id) => _questions.Where(q => q.QuestionNumber == id).Select(q => q.AnswerTextA).First();
+        public string GetSecondAnswerByQuestionId(int id) => _questions.Where(q => q.QuestionNumber == id).Select(q => q.AnswerTextB).First();
+        public string GetThirdAnswerByQuestionId(int id) => _questions.Where(q => q.QuestionNumber == id).Select(q => q.AnswerTextC).First();
+        #endregion
     }
 }

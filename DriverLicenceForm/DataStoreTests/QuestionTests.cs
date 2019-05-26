@@ -1,10 +1,14 @@
-﻿using DataStore;
+﻿/**************************************************************************
+ *                                                                        *
+ *  Copyright:   (c) 2019, Pomirleanu Ioana-Roxana,                       *
+ *                         Rusu Teona-Stefana,                            *
+ *                         Tucaliuc Mariana                               *
+ *  Description: Proiect la Ingineria Programarii                         *
+ *                                                                        *
+ **************************************************************************/
+
+using DataStore;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DataStoreTests
 {
