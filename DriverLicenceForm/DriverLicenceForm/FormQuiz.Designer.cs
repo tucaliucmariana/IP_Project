@@ -40,9 +40,10 @@
             this.C = new System.Windows.Forms.RadioButton();
             this.B = new System.Windows.Forms.RadioButton();
             this.panelIntro = new System.Windows.Forms.Panel();
+            this.buttonHelp = new System.Windows.Forms.Button();
             this.textBoxTitle = new System.Windows.Forms.TextBox();
             this.buttonStart = new System.Windows.Forms.Button();
-            this.buttonHelp = new System.Windows.Forms.Button();
+            this.buttonExit = new System.Windows.Forms.Button();
             this.panelQuestion.SuspendLayout();
             this.groupBoxAnswers.SuspendLayout();
             this.panelIntro.SuspendLayout();
@@ -160,13 +161,22 @@
             // 
             // panelIntro
             // 
-            this.panelIntro.Controls.Add(this.buttonHelp);
             this.panelIntro.Controls.Add(this.textBoxTitle);
             this.panelIntro.Controls.Add(this.buttonStart);
             this.panelIntro.Location = new System.Drawing.Point(14, 23);
             this.panelIntro.Name = "panelIntro";
             this.panelIntro.Size = new System.Drawing.Size(661, 432);
             this.panelIntro.TabIndex = 5;
+            // 
+            // buttonHelp
+            // 
+            this.buttonHelp.Location = new System.Drawing.Point(111, 481);
+            this.buttonHelp.Name = "buttonHelp";
+            this.buttonHelp.Size = new System.Drawing.Size(87, 29);
+            this.buttonHelp.TabIndex = 2;
+            this.buttonHelp.Text = "Ajutor";
+            this.buttonHelp.UseVisualStyleBackColor = true;
+            this.buttonHelp.Click += new System.EventHandler(this.OnHelpButtonClick);
             // 
             // textBoxTitle
             // 
@@ -191,21 +201,23 @@
             this.buttonStart.UseVisualStyleBackColor = true;
             this.buttonStart.Click += new System.EventHandler(this.OnStartButtonClick);
             // 
-            // buttonHelp
+            // buttonExit
             // 
-            this.buttonHelp.Location = new System.Drawing.Point(567, 393);
-            this.buttonHelp.Name = "buttonHelp";
-            this.buttonHelp.Size = new System.Drawing.Size(81, 29);
-            this.buttonHelp.TabIndex = 2;
-            this.buttonHelp.Text = "Ajutor";
-            this.buttonHelp.UseVisualStyleBackColor = true;
-            this.buttonHelp.Click += new System.EventHandler(this.OnHelpButtonClick);
+            this.buttonExit.Location = new System.Drawing.Point(14, 481);
+            this.buttonExit.Name = "buttonExit";
+            this.buttonExit.Size = new System.Drawing.Size(88, 29);
+            this.buttonExit.TabIndex = 6;
+            this.buttonExit.Text = "Iesire";
+            this.buttonExit.UseVisualStyleBackColor = true;
+            this.buttonExit.Click += new System.EventHandler(this.OnExitButtonClick);
             // 
             // FormQuiz
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(704, 484);
+            this.ClientSize = new System.Drawing.Size(762, 530);
+            this.Controls.Add(this.buttonExit);
+            this.Controls.Add(this.buttonHelp);
             this.Controls.Add(this.panelIntro);
             this.Controls.Add(this.panelQuestion);
             this.Name = "FormQuiz";
@@ -237,6 +249,7 @@
         private System.Windows.Forms.Label labelB;
         private System.Windows.Forms.Label labelA;
         private System.Windows.Forms.Button buttonHelp;
+        private System.Windows.Forms.Button buttonExit;
     }
 }
 

@@ -1,36 +1,29 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿/**************************************************************************
+ *                                                                        *
+ *  Copyright:   (c) 2019, Pomirleanu Ioana-Roxana,                       *
+ *                         Rusu Teona-Stefana,                            *
+ *                         Tucaliuc Mariana                               *
+ *  Description: Proiect la Ingineria Programarii                         *
+ *                                                                        *
+ **************************************************************************/
 
-/// <summary>
-/// Autor: Ioana Pomirleanu
-/// Clasa QuestionsRetriever este de tip Singleton
-/// Returneaza lista de intrebari
-/// </summary>
+using System.Collections.Generic;
 
 namespace DataStore
 {
+    /// <summary>
+    /// Autor: Pomirleanu Ioana-Roxana
+    /// Clasa QuestionsRetriever este de tip Singleton
+    /// Returneaza lista de intrebari
+    /// </summary>
     public class QuestionsRetriever
     {
-        
-        private static QuestionsRetriever _instance; 
-
-        // datele propriu-zise ale clasei
-        private List<Question> _questions;
-
-        #region get property
-        public List<Question> QuestionsList
-        {
-            get
-            {
-                return _questions;
-            }
-        }
+        #region Private Member Variables
+        private static QuestionsRetriever _instance;      
+        private List<Question> _questions; // datele propriu-zise ale clasei
         #endregion
 
-        // constructor
+        #region Constructor
         private QuestionsRetriever()
         {
             _questions = new List<Question>()
@@ -87,8 +80,19 @@ namespace DataStore
                                 "B")
             };
         }
+        #endregion
 
-        // initializarea clasei
+        #region Public Properties
+        public List<Question> QuestionsList
+        {
+            get
+            {
+                return _questions;
+            }
+        }
+        #endregion
+
+        // Initializarea clasei de tip Singleton
         public static QuestionsRetriever Instance()
         {
             if(_instance == null)
@@ -98,6 +102,5 @@ namespace DataStore
 
             return _instance;
         }
-
     }
 }
